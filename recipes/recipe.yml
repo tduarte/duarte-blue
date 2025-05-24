@@ -23,6 +23,7 @@ modules:
       cleanup: true # clean up added repos after module is done
       files:
         - 1password.repo
+        - https://negativo17.org/repos/fedora-steam.repo
       copr:
         - sneexy/zen-browser
         - trixieua/mutter-patched
@@ -36,12 +37,14 @@ modules:
       - 1Password
     install:
       skip-unavailable: true # skip unavailable packages
+      install-weak-deps: false
       packages:
         - 1password
         - discord
         - ghostty
         - zen-browser
         - steam
+        - kernel-modules-extra
         - zed
     remove:
       packages:
