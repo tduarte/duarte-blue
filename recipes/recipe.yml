@@ -31,7 +31,7 @@ modules:
       keys:
         - https://downloads.1password.com/linux/keys/1password.asc
     optfix: # performs symlinking for `/opt/` to allow certain packages to install
-      - zen-browser
+      - zen
       - 1Password
     install:
       skip-unavailable: true # skip unavailable packages
