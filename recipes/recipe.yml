@@ -20,7 +20,6 @@ modules:
         destination: /etc/yum.repos.d/
   - type: dnf
     repos:
-      nonfree: rpmfusion
       files:
         - 1password.repo
         - https://negativo17.org/repos/fedora-steam.repo
@@ -38,14 +37,13 @@ modules:
       skip-unavailable: true # skip unavailable packages
       install-weak-deps: false
       packages:
+        - https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-%OS_VERSION%.noarch.rpm
         - 1password
         # - ghostty
         - zen-browser
         - zed
+        - steam
         - discord
-        - repo: fedora-steam
-          packages:
-            - steam
     remove:
       packages:
         - firefox
