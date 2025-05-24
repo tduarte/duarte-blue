@@ -20,14 +20,14 @@ modules:
         destination: /etc/yum.repos.d/
   - type: dnf
     repos:
-      cleanup: true # clean up added repos after module is done
-      nonfree: negativo17
+      nonfree: rpmfusion
       files:
         - 1password.repo
+        - https://negativo17.org/repos/fedora-steam.repo
       copr:
         - sneexy/zen-browser
         - trixieua/mutter-patched
-        - pgdev/ghostty
+        # - pgdev/ghostty
         - che/zed
       keys:
         - https://downloads.1password.com/linux/keys/1password.asc
@@ -39,11 +39,13 @@ modules:
       install-weak-deps: false
       packages:
         - 1password
-        - ghostty
+        # - ghostty
         - zen-browser
         - zed
-        - steam
         - discord
+        - repo: fedora-steam
+          packages:
+            - steam
     remove:
       packages:
         - firefox
