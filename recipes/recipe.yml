@@ -20,7 +20,7 @@ modules:
     repos:
       cleanup: true # clean up added repos after module is done
       files:
-        - 1Password.repo
+        - https://downloads.1password.com/linux/rpm/stable/x86_64
         - https://repos.fyralabs.com/terra%OS_VERSION%
       copr:
         - sneexy/zen-browser
@@ -36,9 +36,7 @@ modules:
     install:
       skip-unavailable: true # skip unavailable packages
       packages:
-        - repo: 1Password
-          packages:
-            - 1password
+        - 1password
         - discord
         - ghostty
         - zen-browser
