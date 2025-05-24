@@ -21,9 +21,9 @@ modules:
   - type: dnf
     repos:
       cleanup: true # clean up added repos after module is done
+      nonfree: negativo17
       files:
         - 1password.repo
-        - https://negativo17.org/repos/fedora-steam.repo
       copr:
         - sneexy/zen-browser
         - trixieua/mutter-patched
@@ -31,7 +31,6 @@ modules:
         - che/zed
       keys:
         - https://downloads.1password.com/linux/keys/1password.asc
-      nonfree: rpmfusion
     optfix: # performs symlinking for `/opt/` to allow certain packages to install
       - zen-browser
       - 1Password
@@ -40,12 +39,11 @@ modules:
       install-weak-deps: false
       packages:
         - 1password
-        - discord
         - ghostty
         - zen-browser
-        - steam
-        - kernel-modules-extra
         - zed
+        - steam
+        - discord
     remove:
       packages:
         - firefox
@@ -57,7 +55,7 @@ modules:
       # If no repo information is specified, Flathub will be used by default
       repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
       repo-name: flathub
-      repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
+      repo-title: "Flathub (system)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
       install:
         - io.github.Foldex.AdwSteamGtk
         - com.github.tchx84.Flatseal
