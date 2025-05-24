@@ -16,6 +16,8 @@ modules:
     files:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+      - source: dnf
+        destination: /etc/yum.repos.d/
   - type: dnf
     repos:
       cleanup: true # clean up added repos after module is done
