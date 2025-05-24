@@ -22,8 +22,8 @@ modules:
     repos:
       cleanup: true # clean up added repos after module is done
       files:
-        - https://downloads.1password.com/linux/rpm/stable/x86_64
         - https://repos.fyralabs.com/terra%OS_VERSION%
+        - 1password.repo
       copr:
         - sneexy/zen-browser
         - trixieua/mutter-patched
