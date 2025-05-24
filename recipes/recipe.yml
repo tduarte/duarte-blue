@@ -6,7 +6,7 @@ name: duarte-blue
 description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/bluefin-nvidia-open
+base-image: ghcr.io/ublue-os/bazzite-gnome-nvidia-open
 image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
@@ -22,10 +22,8 @@ modules:
     repos:
       files:
         - 1password.repo
-        - https://negativo17.org/repos/fedora-steam.repo
       copr:
         - sneexy/zen-browser
-        - trixieua/mutter-patched
         # - pgdev/ghostty
         - che/zed
       keys:
@@ -42,27 +40,19 @@ modules:
         # - ghostty
         - zen-browser
         - zed
-        - steam
         - discord
+        - broadcom-wl
     remove:
       packages:
+        - bazaar
         - firefox
         - firefox-langpacks
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
-      # If no repo information is specified, Flathub will be used by default
-      repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
-      repo-name: flathub
-      repo-title: "Flathub (system)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
       install:
-        - io.github.Foldex.AdwSteamGtk
-        - com.github.tchx84.Flatseal
-        - com.vysp3r.ProtonPlus
         - io.github.shiftey.Desktop
-        - com.mattjakeman.ExtensionManager
-        - com.brave.Browser
         - net.nokyan.Resources
         - page.kramo.Cartridges
     user: {} # Also add Flathub user repo, but no user packages
