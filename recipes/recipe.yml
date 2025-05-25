@@ -24,6 +24,7 @@ modules:
         - 1password.repo
       copr:
         - sneexy/zen-browser
+        - peterwu/rendezvous
         # - pgdev/ghostty
         - che/zed
       keys:
@@ -39,6 +40,7 @@ modules:
         # - ghostty
         - zen-browser
         - zed
+        - bibata-cursor-themes
         - repo: rpmfusion-nonfree-updates
           packages:
             - discord

@@ -3,7 +3,11 @@ enabled-extensions=['logomenu@aryan_k', 'appindicatorsupport@rgcjonas.gmail.com'
 disabled-extensions=['background-logo@fedorahosted.org']
 
 [org.gnome.shell]
-favorite-apps=['org.gnome.Nautilus.desktop', 'zen-browser.desktop', 'steam.desktop', 'net.lutris.Lutris.desktop', 'com.discordapp.Discord.desktop', 'org.gnome.Software.desktop', 'org.gnome.Ptyxis.desktop', ]
+favorite-apps=['org.gnome.Nautilus.desktop', 'zen-browser.desktop', 'steam.desktop', 'net.lutris.Lutris.desktop', 'com.discordapp.Discord.desktop', 'org.gnome.Software.desktop', 'org.gnome.Ptyxis.desktop']
 
 [org.gnome.desktop.app-folders.folders]
 Utilities.apps=['btop.desktop', 'btrfs-assistant.desktop', 'de.leopoldluley.Clapgrep.desktop', 'ca.desrt.dconf-editor.desktop', 'discourse.desktop', 'org.gnome.baobab.desktop', 'bazzite-documentation.desktop', 'com.mattjakeman.ExtensionManager.desktop', 'firewall-config.desktop', 'com.github.tchx84.Flatseal.desktop', 'waydroid-container-restart.desktop', 'it.mijorus.gearlever.desktop', 'yelp.desktop', 'io.github.flattool.Ignition.desktop', 'nvidia-settings.desktop', 'nvtop.desktop', 'system-update.desktop', 'org.gnome.tweaks.desktop', 'yafti.desktop', 'fish.desktop', 'tuned-gui.desktop', 'rog-control-center.desktop', 'tuned-gui.desktop', 'com.github.GradienceTeam.Gradience', 'setroubleshoot.desktop', 'org.rncbc.qsynth.desktop', 'bazzite-landing.desktop', 'org.virt_manager.virt-manager.desktop', 'io.github.fastrizwaan.WineZGUI.desktop', 'io.github.flattool.Warehouse.desktop', 'Waydroid.desktop', 'webapp-manager.desktop']
+
+[org.gnome.desktop.interface]
+cursor-theme=['Bibata-Modern-Ice']
+icon-theme=['WhiteSur-purple']
