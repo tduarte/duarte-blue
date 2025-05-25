@@ -1,0 +1,77 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+# image will be published to ghcr.io/tduarte/duarte-blue
+name: duarte-blue
+# description will be included in the image's metadata
+description: This image adds some apps that work best non-sandboxed.
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/ublue-os/bazzite-gnome-nvidia-open
+image-version: latest # latest is also supported if you want new updates ASAP
+
+# module configuration, executed in order
+# you can include multiple instances of the same module
+modules:
+  - type: files
+    files:
+      - source: system
+        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+      - source: dnf
+        destination: /etc/yum.repos.d/
+  - type: dnf
+    repos:
+      files:
+        - 1password.repo
+      copr:
+        - sneexy/zen-browser
+        - peterwu/rendezvous
+        # - pgdev/ghostty
+        - che/zed
+      keys:
+        - https://downloads.1password.com/linux/keys/1password.asc
+    optfix: # performs symlinking for `/opt/` to allow certain packages to install
+      - zen
+      - 1Password
+    install:
+      skip-unavailable: true # skip unavailable packages
+      install-weak-deps: false
+      packages:
+        - 1password
+        - zsh
+        # - ghostty
+        - zen-browser
+        - zed
+        - bibata-cursor-themes
+        - repo: rpmfusion-nonfree-updates
+          packages:
+            - discord
+    remove:
+      packages:
+        - bazaar
+        - firefox
+        - firefox-langpacks
+        - Sunshine
+        - sunshine
+
+  - type: default-flatpaks
+    notify: true # Send notification after install/uninstall is finished (true/false)
+    system:
+      install:
+        - io.github.shiftey.Desktop
+        - net.nokyan.Resources
+        - page.kramo.Cartridges
+        - com.vysp3r.ProtonPlus
+        - com.dec05eba.gpu_screen_recorder
+
+    user: {} # Also add Flathub user repo, but no user packages
+
+  - type: gschema-overrides
+    include:
+      - zz1-duarte.gschema.override # test & compile specific override file included in files/gschema-overrides/zz1-myoverride.gschema.override
+
+  - type: script
+    scripts:
+      - ohmyzsh.sh # example: run config/scripts/myscript.sh
+      - removewallpapers.sh
+
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully
