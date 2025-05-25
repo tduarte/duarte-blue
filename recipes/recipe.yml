@@ -49,6 +49,8 @@ modules:
         - bazaar
         - firefox
         - firefox-langpacks
+        - Sunshine
+        - sunshine
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
@@ -57,6 +59,9 @@ modules:
         - io.github.shiftey.Desktop
         - net.nokyan.Resources
         - page.kramo.Cartridges
+        - com.vysp3r.ProtonPlus
+        - com.dec05eba.gpu_screen_recorder
+
     user: {} # Also add Flathub user repo, but no user packages
   - type: gschema-overrides
     include:
