@@ -1,12 +1,30 @@
 # duarte-blue &nbsp; [![bluebuild build badge](https://github.com/tduarte/duarte-blue/actions/workflows/build.yml/badge.svg)](https://github.com/tduarte/duarte-blue/actions/workflows/build.yml)
 
-See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
+## About
 
-After setup, it is recommended you update this README to describe your custom image.
+**duarte-blue** is a gaming-focused Universal Blue image that delivers the ultimate Linux gaming and desktop experience out of the box. Built on top of Bazzite (GNOME + NVIDIA), this custom image is designed for gamers and users who want a visually stunning, high-performance system without the hassle of manual configuration.
+
+### What's Included
+
+🎮 **Gaming Ready**
+- Steam and Lutris pre-configured for gaming
+- NVIDIA drivers
+- And all other improvements provided by Bazzite
+
+🌐 **Modern Applications**
+- Zen Browser (replaces Firefox)
+- Native Discord with hardware acceleration
+- Native 1Password for better system integration
+- Native Zed editor for development work and terminal support
+
+✨ **Visual Polish**
+- Bibata Modern Ice cursor theme
+- WhiteSur Purple icon theme
+- Organized app folders and favorites
 
 ## Installation
 
-> [!WARNING]  
+> [!WARNING]
 > [This is an experimental feature](https://www.fedoraproject.org/wiki/Changes/OstreeNativeContainerStable), try at your own discretion.
 
 To rebase an existing atomic Fedora installation to the latest build:
