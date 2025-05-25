@@ -1,20 +1,17 @@
 [org.gnome.shell]
 enabled-extensions=['logomenu@aryan_k', 'appindicatorsupport@rgcjonas.gmail.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'gsconnect@andyholmes.github.io', 'just-perfection-desktop@just-perfection', 'blur-my-shell@aunetx', 'hotedge@jonathan.jdoda.ca', 'supergfxctl-gex@asus-linux.org', 'caffeine@patapon.info', 'tilingshell@ferrarodomenico.com']
 disabled-extensions=['background-logo@fedorahosted.org']
-
-[org.gnome.shell]
 favorite-apps=['org.gnome.Nautilus.desktop', 'zen-browser.desktop', 'steam.desktop', 'net.lutris.Lutris.desktop', 'discord.desktop', 'org.gnome.Software.desktop', 'org.gnome.Ptyxis.desktop']
+
+[org.gnome.desktop.peripherals.touchpad]
+tap-to-click=true
 
 [org.gnome.desktop.app-folders.folders]
 GamingUtilities.apps=['com.github.Matoking.protontricks.desktop', 'discover_overlay_configure.desktop', 'com.vysp3r.ProtonPlus.desktop', 'io.github.benjamimgois.goverlay.desktop', 'com.gerbilsoft.rom-properties.rp-config.desktop', 'input-remapper-gtk.desktop', 'steamos-nested-desktop.desktop', 'hhd-ui.desktop', 'sunshine.desktop']
 GamingUtilities.name='Gaming Utilities'
 Utilities.apps=['gnome-abrt.desktop', 'gnome-system-log.desktop', 'nm-connection-editor.desktop', 'org.gnome.baobab.desktop', 'org.gnome.Connections.desktop', 'org.gnome.DejaDup.desktop', 'org.gnome.Dictionary.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.Evince.desktop', 'org.gnome.FileRoller.desktop', 'org.gnome.fonts.desktop', 'org.gnome.Loupe.desktop', 'org.gnome.seahorse.Application.desktop', 'org.gnome.tweaks.desktop', 'org.gnome.Usage.desktop', 'vinagre.desktop', 'discourse.desktop', 'discover_overlay_configure.desktop', 'nvidia-settings.desktop', 'page.codeberg.libre_menu_editor.LibreMenuEditor.desktop', 'firewall-config.desktop', 'webapp-manager.desktop', 'org.freedesktop.MalcontentControl.desktop', 'yelp.desktop', 'sunshine.desktop']
 
-
-
 [org.gnome.desktop.interface]
 show-battery-percentage=true
-
-[org.gnome.desktop.interface]
 cursor-theme='Bibata-Modern-Ice'
 icon-theme='WhiteSur-purple'

@@ -37,6 +37,7 @@ modules:
       install-weak-deps: false
       packages:
         - 1password
+        - zsh
         # - ghostty
         - zen-browser
         - zed
@@ -63,8 +64,14 @@ modules:
         - com.dec05eba.gpu_screen_recorder
 
     user: {} # Also add Flathub user repo, but no user packages
+
   - type: gschema-overrides
     include:
       - zz1-duarte.gschema.override # test & compile specific override file included in files/gschema-overrides/zz1-myoverride.gschema.override
+
+  - type: script
+    scripts:
+      - ohmyzsh.sh # example: run config/scripts/myscript.sh
+      - removewallpapers.sh
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
