@@ -45,6 +45,7 @@ modules:
         - repo: rpmfusion-nonfree-updates
           packages:
             - discord
+            - broadcom-wl
     remove:
       packages:
         - bazaar
