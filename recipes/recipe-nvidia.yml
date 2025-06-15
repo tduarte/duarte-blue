@@ -96,9 +96,6 @@ modules:
       - Night Theme Switcher
     uninstall:
       - Dash to Dock
-      - Apps Menu
-      - Launch New Instance
-      - Places Status Indicator
       - Tailscale QS
 
   - type: gschema-overrides
