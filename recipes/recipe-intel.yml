@@ -7,7 +7,7 @@ description: This image adds some apps that work best non-sandboxed.
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/bluefin
-image-version: stable # latest is also supported if you want new updates ASAP
+image-version: stable-daily # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -20,6 +20,7 @@ modules:
         destination: /etc/yum.repos.d/
   - type: dnf
     repos:
+      nonfree: rpmfusion
       files:
         - 1password.repo
       copr:
@@ -37,10 +38,9 @@ modules:
         - zsh
         - ghostty
         - bibata-cursor-themes
-        # - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-42.noarch.rpm
-        # - repo: rpmfusion-nonfree-updates
-        #   packages:
-        #     - broadcom-wl
+        - repo: rpmfusion-nonfree-updates
+          packages:
+            - broadcom-wl
     remove:
       packages:
         - fish
