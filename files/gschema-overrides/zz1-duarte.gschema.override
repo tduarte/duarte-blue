@@ -1,6 +1,4 @@
 [org.gnome.shell]
-enabled-extensions=['logomenu@aryan_k', 'appindicatorsupport@rgcjonas.gmail.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'gsconnect@andyholmes.github.io', 'just-perfection-desktop@just-perfection', 'blur-my-shell@aunetx', 'hotedge@jonathan.jdoda.ca', 'supergfxctl-gex@asus-linux.org', 'caffeine@patapon.info', 'tilingshell@ferrarodomenico.com']
-disabled-extensions=['background-logo@fedorahosted.org']
 favorite-apps=['org.gnome.Nautilus.desktop', 'zen-browser.desktop', 'steam.desktop', 'net.lutris.Lutris.desktop', 'discord.desktop', 'org.gnome.Software.desktop', 'org.gnome.Ptyxis.desktop']
 
 [org.gnome.desktop.peripherals.touchpad]
@@ -14,4 +12,4 @@ Utilities.apps=['gnome-abrt.desktop', 'gnome-system-log.desktop', 'nm-connection
 [org.gnome.desktop.interface]
 show-battery-percentage=true
 cursor-theme='Bibata-Modern-Ice'
-icon-theme='WhiteSur-purple'
+icon-theme='WhiteSur'

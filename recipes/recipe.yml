@@ -83,6 +83,27 @@ modules:
 
     user: {} # Also add Flathub user repo, but no user packages
 
+  - type: gnome-extensions
+    install:
+      - Night Theme Switcher
+      - Blur my Shell
+      - AppIndicator and KStatusNotifierItem Support
+      - Alphabetical App Grid
+      - Desktop Icons NG (DING)
+      - Hot Edge
+      - Tiling Shell
+      - Gnome 4x UI Improvements
+      - Just Perfection
+      - Night Theme Switcher
+    uninstall:
+      - GSConnect
+      - Window List
+      - Dash to Dock
+      - Apps Menu
+      - Launch New Instance
+      - Places Status Indicator
+      - Tailscale QS
+
   - type: gschema-overrides
     include:
       - zz1-duarte.gschema.override # test & compile specific override file included in files/gschema-overrides/zz1-myoverride.gschema.override
