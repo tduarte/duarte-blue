@@ -96,7 +96,6 @@ modules:
       - Just Perfection
       - Night Theme Switcher
     uninstall:
-      - Window List
       - Dash to Dock
       - Apps Menu
       - Launch New Instance

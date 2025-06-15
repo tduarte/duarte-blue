@@ -1,6 +1,6 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
-# image will be published to ghcr.io/tduarte/duarte-blue
+# image will be published to ghcr.io/tduarte/duarte-blue-nvidia
 name: duarte-blue-nvidia
 # description will be included in the image's metadata
 description: This image adds some apps that work best non-sandboxed.
@@ -95,7 +95,6 @@ modules:
       - Just Perfection
       - Night Theme Switcher
     uninstall:
-      - Window List
       - Dash to Dock
       - Apps Menu
       - Launch New Instance
