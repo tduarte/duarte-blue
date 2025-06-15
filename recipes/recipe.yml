@@ -96,7 +96,6 @@ modules:
       - Just Perfection
       - Night Theme Switcher
     uninstall:
-      - GSConnect
       - Window List
       - Dash to Dock
       - Apps Menu
