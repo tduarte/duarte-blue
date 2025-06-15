@@ -22,14 +22,12 @@ modules:
     repos:
       files:
         - 1password.repo
-        - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-42.noarch.rpm
       copr:
         - peterwu/rendezvous
         - pgdev/ghostty
       keys:
         - https://downloads.1password.com/linux/keys/1password.asc
     optfix: # performs symlinking for `/opt/` to allow certain packages to install
-      - zen
       - 1Password
     install:
       skip-unavailable: true # skip unavailable packages
@@ -39,9 +37,10 @@ modules:
         - zsh
         - ghostty
         - bibata-cursor-themes
-        - repo: rpmfusion-nonfree-updates
-          packages:
-            - broadcom-wl
+        # - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-42.noarch.rpm
+        # - repo: rpmfusion-nonfree-updates
+        #   packages:
+        #     - broadcom-wl
     remove:
       packages:
         - fish
