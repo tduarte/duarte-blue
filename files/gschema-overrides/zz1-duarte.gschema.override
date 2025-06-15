@@ -13,3 +13,9 @@ Utilities.apps=['gnome-abrt.desktop', 'gnome-system-log.desktop', 'nm-connection
 show-battery-percentage=true
 cursor-theme='Bibata-Modern-Ice'
 icon-theme='WhiteSur'
+
+[org.gnome.shell.extensions.gnome-ui-tune]
+increase-thumbnails-size='300%'
+
+[org.gnome.shell.extensions.just-perfection]
+dash-icon-size=56
