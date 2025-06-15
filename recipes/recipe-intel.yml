@@ -23,10 +23,7 @@ modules:
       files:
         - 1password.repo
       copr:
-        - sneexy/zen-browser
         - peterwu/rendezvous
-        - pgdev/ghostty
-        - che/zed
       keys:
         - https://downloads.1password.com/linux/keys/1password.asc
     optfix: # performs symlinking for `/opt/` to allow certain packages to install
@@ -38,17 +35,12 @@ modules:
       packages:
         - 1password
         - zsh
-        - ghostty
-        - zen-browser
-        - zed
         - bibata-cursor-themes
         - repo: rpmfusion-nonfree-updates
           packages:
-            - discord
             - broadcom-wl
     remove:
       packages:
-        - bazaar
         - firefox
         - firefox-langpacks
         - Sunshine
@@ -61,6 +53,12 @@ modules:
         - io.github.shiftey.Desktop
         - net.nokyan.Resources
         - page.kramo.Cartridges
+        - net.lutris.Lutris
+        - dev.zed.Zed
+        - com.heroicgameslauncher.hgl
+        - com.discordapp.Discord
+        - app.zen_browser.zen
+        - com.valvesoftware.Steam
         - com.vysp3r.ProtonPlus
         - com.dec05eba.gpu_screen_recorder
 
@@ -74,5 +72,6 @@ modules:
     scripts:
       - ohmyzsh.sh # example: run config/scripts/myscript.sh
       - removewallpapers.sh
+      - ghostty.sh
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
