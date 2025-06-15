@@ -32,11 +32,12 @@
 - HandBrake
 - Camera Controls
 - BoxBuddy
+- Oh-My-Zsh
 
 🎨 **Visual & Desktop Experience**
 - Bibata cursor themes
-- Oh My Zsh shell configuration
-- Multiple GNOME extensions:
+- WhiteSur Icons
+- GNOME extensions:
   - Night Theme Switcher
   - Blur my Shell
   - AppIndicator support
