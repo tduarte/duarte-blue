@@ -1,13 +1,13 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 # image will be published to ghcr.io/tduarte/duarte-blue
-name: duarte-blue-intel
+name: duarte-blue-nvidia
 # description will be included in the image's metadata
 description: This image adds some apps that work best non-sandboxed.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/bluefin
-image-version: stable-daily # latest is also supported if you want new updates ASAP
+base-image: ghcr.io/ublue-os/bazzite-gnome-nvidia-open
+image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -20,15 +20,17 @@ modules:
         destination: /etc/yum.repos.d/
   - type: dnf
     repos:
-      nonfree: rpmfusion
       files:
         - 1password.repo
       copr:
+        - sneexy/zen-browser
         - peterwu/rendezvous
-        - pgdev/ghostty
+        # - pgdev/ghostty
+        - che/zed
       keys:
         - https://downloads.1password.com/linux/keys/1password.asc
     optfix: # performs symlinking for `/opt/` to allow certain packages to install
+      - zen
       - 1Password
     install:
       skip-unavailable: true # skip unavailable packages
@@ -36,15 +38,16 @@ modules:
       packages:
         - 1password
         - zsh
-        - ghostty
+        # - ghostty
+        - zen-browser
+        - zed
         - bibata-cursor-themes
         - repo: rpmfusion-nonfree-updates
           packages:
-            - broadcom-wl
+            - discord
     remove:
       packages:
-        - fish
-        - ncurses-term
+        - bazaar
         - firefox
         - firefox-langpacks
         - Sunshine
@@ -57,12 +60,6 @@ modules:
         - io.github.shiftey.Desktop
         - net.nokyan.Resources
         - page.kramo.Cartridges
-        - net.lutris.Lutris
-        - dev.zed.Zed
-        - com.heroicgameslauncher.hgl
-        - com.discordapp.Discord
-        - app.zen_browser.zen
-        - com.valvesoftware.Steam
         - com.vysp3r.ProtonPlus
         - com.dec05eba.gpu_screen_recorder
 

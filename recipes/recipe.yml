@@ -1,13 +1,13 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 # image will be published to ghcr.io/tduarte/duarte-blue
-name: duarte-blue-nvidia
+name: duarte-blue
 # description will be included in the image's metadata
 description: This image adds some apps that work best non-sandboxed.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/bazzite-gnome-nvidia-open
-image-version: latest # latest is also supported if you want new updates ASAP
+base-image: ghcr.io/ublue-os/bluefin
+image-version: stable-daily # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -20,17 +20,15 @@ modules:
         destination: /etc/yum.repos.d/
   - type: dnf
     repos:
+      nonfree: rpmfusion
       files:
         - 1password.repo
       copr:
-        - sneexy/zen-browser
         - peterwu/rendezvous
-        # - pgdev/ghostty
-        - che/zed
+        - pgdev/ghostty
       keys:
         - https://downloads.1password.com/linux/keys/1password.asc
     optfix: # performs symlinking for `/opt/` to allow certain packages to install
-      - zen
       - 1Password
     install:
       skip-unavailable: true # skip unavailable packages
@@ -38,16 +36,15 @@ modules:
       packages:
         - 1password
         - zsh
-        # - ghostty
-        - zen-browser
-        - zed
+        - ghostty
         - bibata-cursor-themes
         - repo: rpmfusion-nonfree-updates
           packages:
-            - discord
+            - broadcom-wl
     remove:
       packages:
-        - bazaar
+        - fish
+        - ncurses-term
         - firefox
         - firefox-langpacks
         - Sunshine
@@ -60,8 +57,29 @@ modules:
         - io.github.shiftey.Desktop
         - net.nokyan.Resources
         - page.kramo.Cartridges
+        - net.lutris.Lutris
+        - dev.zed.Zed
+        - com.heroicgameslauncher.hgl
+        - com.discordapp.Discord
+        - app.zen_browser.zen
+        - com.valvesoftware.Steam
         - com.vysp3r.ProtonPlus
         - com.dec05eba.gpu_screen_recorder
+        - com.github.marhkb.Pods
+        - com.github.tchx84.Flatseal
+        - com.jeffser.Alpaca
+        - com.jeffser.Alpaca.Plugins.AMD
+        - com.mattjakeman.ExtensionManager
+        - com.rafaelmardojai.Blanket
+        - com.valvesoftware.Steam.Utility.steamtinkerlaunch
+        - de.haeckerfelix.Fragments
+        - fr.handbrake.ghb
+        - hu.irl.cameractrls
+        - io.github.Foldex.AdwSteamGtk
+        - io.github.dvlv.boxbuddyrs
+        - it.mijorus.gearlever
+        - page.kramo.Cartridges
+        - page.tesk.Refine
 
     user: {} # Also add Flathub user repo, but no user packages
 
