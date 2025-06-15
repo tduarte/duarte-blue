@@ -41,6 +41,8 @@ modules:
         - repo: rpmfusion-nonfree-updates
           packages:
             - broadcom-wl
+            - discord
+            - steam
     remove:
       packages:
         - fish
@@ -60,9 +62,7 @@ modules:
         - net.lutris.Lutris
         - dev.zed.Zed
         - com.heroicgameslauncher.hgl
-        - com.discordapp.Discord
         - app.zen_browser.zen
-        - com.valvesoftware.Steam
         - com.vysp3r.ProtonPlus
         - com.dec05eba.gpu_screen_recorder
         - com.github.marhkb.Pods
@@ -70,7 +70,6 @@ modules:
         - com.jeffser.Alpaca
         - com.mattjakeman.ExtensionManager
         - com.rafaelmardojai.Blanket
-        - com.valvesoftware.Steam.Utility.steamtinkerlaunch
         - de.haeckerfelix.Fragments
         - fr.handbrake.ghb
         - hu.irl.cameractrls

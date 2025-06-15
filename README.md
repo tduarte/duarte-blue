@@ -2,25 +2,50 @@
 
 ## About
 
-**duarte-blue** is a gaming-focused Universal Blue image that delivers the ultimate Linux gaming and desktop experience out of the box. Built on top of Bluefin (Intel/AMD) or Bazzite GNOME (NVIDIA), this custom image comes in two variants and is designed for gamers and users who want a visually stunning, high-performance system without the hassle of manual configuration.
+**duarte-blue** is a gaming-focused Universal Blue image that delivers the ultimate Linux gaming and desktop experience out of the box. Built on top of Bluefin, this custom image comes in two variants and is designed for gamers and users who want a visually stunning, high-performance system without the hassle of manual configuration.
 
 ### What's Included
 
-🎮 **Gaming Ready**
+🎮 **Gaming & Entertainment**
 - Steam and Lutris pre-configured for gaming
+- Heroic Games Launcher for Epic Games Store integration
+- Cartridges for managing game libraries
+- ProtonPlus for managing Proton versions
+- AdwSteamGtk for improved Steam GTK theming
+- GPU Screen Recorder for game recording
 - GPU drivers (NVIDIA or Intel/AMD depending on variant)
-- And all other improvements provided by Bazzite
 
-🌐 **Modern Applications**
-- Zen Browser (replaces Firefox)
+🌐 **Applications & Development**
+- Zen Browser (Browser with vertical tabs, based on Firefox)
 - Native Discord with hardware acceleration
-- Native 1Password for better system integration
-- Native Zed editor for development work and terminal support
+- 1Password
+- Zed Editor
+- Ghostty Terminal
+- Alpaca AI (with AMD plugin support)
+- Flatseal for Flatpak permissions
+- GearLever for AppImages
 
-✨ **Visual Polish**
-- Bibata Modern Ice cursor theme
-- WhiteSur Purple icon theme
-- Organized app folders and favorites
+🛠️ **System Tools & Utilities**
+- Extension Manager
+- Blanket
+- Fragments
+- HandBrake
+- Camera Controls
+- BoxBuddy
+
+🎨 **Visual & Desktop Experience**
+- Bibata cursor themes
+- Oh My Zsh shell configuration
+- Multiple GNOME extensions:
+  - Night Theme Switcher
+  - Blur my Shell
+  - AppIndicator support
+  - Alphabetical App Grid
+  - Desktop Icons NG (DING)
+  - Hot Edge
+  - Tiling Shell
+  - Gnome 4x UI Improvements
+  - Just Perfection
 
 ## Installation
 
@@ -70,8 +95,6 @@ To rebase an existing atomic Fedora installation to the NVIDIA build:
   ```
   systemctl reboot
   ```
-
-The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in the respective `recipe.yml`, so you won't get accidentally updated to the next major version.
 
 ## ISO
 
