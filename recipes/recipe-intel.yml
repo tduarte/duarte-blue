@@ -6,8 +6,8 @@ name: duarte-blue-intel
 description: This image adds some apps that work best non-sandboxed.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/bazzite-gnome
-image-version: latest # latest is also supported if you want new updates ASAP
+base-image: ghcr.io/ublue-os/bluefin
+image-version: stable # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -25,7 +25,7 @@ modules:
       copr:
         - sneexy/zen-browser
         - peterwu/rendezvous
-        # - pgdev/ghostty
+        - pgdev/ghostty
         - che/zed
       keys:
         - https://downloads.1password.com/linux/keys/1password.asc
@@ -38,7 +38,7 @@ modules:
       packages:
         - 1password
         - zsh
-        # - ghostty
+        - ghostty
         - zen-browser
         - zed
         - bibata-cursor-themes
