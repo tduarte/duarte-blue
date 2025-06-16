@@ -3,7 +3,7 @@
 # image will be published to ghcr.io/tduarte/duarte-blue-nvidia
 name: duarte-blue-nvidia
 # description will be included in the image's metadata
-description: This image adds some apps that work best non-sandboxed.
+description: A custom image built on top of the bluefin base image. For NVIDIA GPUs.
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/bluefin-nvidia-open
@@ -12,99 +12,9 @@ image-version: stable-daily # latest is also supported if you want new updates A
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  - type: files
-    files:
-      - source: system
-        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
-      - source: dnf
-        destination: /etc/yum.repos.d/
-  - type: dnf
-    repos:
-      nonfree: rpmfusion
-      files:
-        - 1password.repo
-      copr:
-        - peterwu/rendezvous
-        - pgdev/ghostty
-      keys:
-        - https://downloads.1password.com/linux/keys/1password.asc
-    optfix: # performs symlinking for `/opt/` to allow certain packages to install
-      - 1Password
-    install:
-      skip-unavailable: true # skip unavailable packages
-      install-weak-deps: false
-      packages:
-        - 1password
-        - zsh
-        - ghostty
-        - bibata-cursor-themes
-        - repo: rpmfusion-nonfree-updates
-          packages:
-            - broadcom-wl
-            - discord
-    remove:
-      packages:
-        - fish
-        - ncurses-term
-        - firefox
-        - firefox-langpacks
-        - Sunshine
-        - sunshine
-
+  - from-file: modules.yml
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
-      install:
-        - io.github.shiftey.Desktop
-        - net.nokyan.Resources
-        - page.kramo.Cartridges
-        - net.lutris.Lutris
-        - dev.zed.Zed
-        - com.heroicgameslauncher.hgl
-        - app.zen_browser.zen
-        - com.valvesoftware.Steam
-        - com.vysp3r.ProtonPlus
-        - com.dec05eba.gpu_screen_recorder
-        - com.github.marhkb.Pods
-        - com.github.tchx84.Flatseal
-        - com.jeffser.Alpaca
-        - com.mattjakeman.ExtensionManager
-        - com.rafaelmardojai.Blanket
-        - com.valvesoftware.Steam.Utility.steamtinkerlaunch
-        - de.haeckerfelix.Fragments
-        - fr.handbrake.ghb
-        - hu.irl.cameractrls
-        - io.github.Foldex.AdwSteamGtk
-        - io.github.dvlv.boxbuddyrs
-        - it.mijorus.gearlever
-        - page.kramo.Cartridges
-        - page.tesk.Refine
-
-    user: {} # Also add Flathub user repo, but no user packages
-
-  - type: gnome-extensions
-    install:
-      - Night Theme Switcher
-      - Blur my Shell
-      - AppIndicator and KStatusNotifierItem Support
-      - Alphabetical App Grid
-      - Desktop Icons NG (DING)
-      - Hot Edge
-      - Tiling Shell
-      - Gnome 4x UI Improvements
-      - Just Perfection
-      - Night Theme Switcher
-    uninstall:
-      - Dash to Dock
-      - Tailscale QS
-
-  - type: gschema-overrides
-    include:
-      - zz1-duarte.gschema.override # test & compile specific override file included in files/gschema-overrides/zz1-myoverride.gschema.override
-
-  - type: script
-    scripts:
-      - ohmyzsh.sh # example: run config/scripts/myscript.sh
-      - tweaks.sh
-
-  - type: signing # this sets up the proper policy & signing files for signed images to work fully
+      remove:
+        - com.jeffser.Alpaca.Plugins.AMD
