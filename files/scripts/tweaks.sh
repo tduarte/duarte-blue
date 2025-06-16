@@ -51,7 +51,7 @@ cd WhiteSur-icon-theme-master
 # Run the installer with -a
 echo "Installing icon theme..."
 chmod +x install.sh
-./install.sh -a
+./install.sh -a -d /usr/share/icons
 
 # Cleanup
 echo "Cleaning up..."
