@@ -106,6 +106,6 @@ modules:
   - type: script
     scripts:
       - ohmyzsh.sh # example: run config/scripts/myscript.sh
-      - removewallpapers.sh
+      - tweaks.sh
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
