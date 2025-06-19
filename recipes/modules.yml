@@ -22,7 +22,6 @@ modules:
       install-weak-deps: false
       packages:
         - 1password
-        - zsh
         - ghostty
         - bibata-cursor-themes
         - repo: rpmfusion-nonfree-updates
