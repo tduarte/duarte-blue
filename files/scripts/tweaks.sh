@@ -58,3 +58,5 @@ echo "Cleaning up..."
 rm -rf "$TMP_DIR"
 
 echo "✅ WhiteSur icon theme installed successfully!"
+
+curl -f https://zed.dev/install.sh | sh

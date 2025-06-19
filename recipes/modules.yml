@@ -46,7 +46,6 @@ modules:
         - net.nokyan.Resources
         - page.kramo.Cartridges
         - net.lutris.Lutris
-        - dev.zed.Zed
         - com.heroicgameslauncher.hgl
         - app.zen_browser.zen
         - com.valvesoftware.Steam
