@@ -6,47 +6,49 @@
 
 ### What's Included
 
-🎮 **Gaming & Entertainment**
-- Steam and Lutris pre-configured for gaming
-- Heroic Games Launcher for Epic Games Store integration
-- Cartridges for managing game libraries
-- ProtonPlus for managing Proton versions
-- AdwSteamGtk for improved Steam GTK theming
-- GPU Screen Recorder for game recording
-- GPU drivers (NVIDIA or Intel/AMD depending on variant)
-
 🌐 **Applications & Development**
-- Zen Browser (Browser with vertical tabs, based on Firefox)
-- Native Discord with hardware acceleration
-- 1Password
-- Zed Editor
-- Ghostty Terminal
-- Alpaca AI (with AMD plugin support)
-- Flatseal for Flatpak permissions
-- GearLever for AppImages
+- [Zen Browser](https://flathub.org/apps/app.zen_browser.zen) (Browser with vertical tabs, based on Firefox)
+- Native [Discord](https://discord.com/) with hardware acceleration
+- [1Password](https://1password.com/)
+- [Zed Editor](https://zed.dev/)
+- [Ghostty Terminal](https://ghostty.org/)
+- [Alpaca AI](https://flathub.org/apps/com.jeffser.Alpaca) (with [AMD plugin](https://flathub.org/apps/com.jeffser.Alpaca.Plugins.AMD) support)
+- [Flatseal](https://flathub.org/apps/com.github.tchx84.Flatseal) for Flatpak permissions
+- [GearLever](https://flathub.org/apps/it.mijorus.gearlever) for AppImages
+
+🎮 **Gaming & Entertainment**
+- [Steam](https://flathub.org/apps/com.valvesoftware.Steam) and [Lutris](https://flathub.org/apps/net.lutris.Lutris) pre-configured for gaming
+- [Heroic Games Launcher](https://flathub.org/apps/com.heroicgameslauncher.hgl) for Epic Games Store integration
+- [Cartridges](https://flathub.org/apps/page.kramo.Cartridges) for managing game libraries
+- [ProtonPlus](https://flathub.org/apps/com.vysp3r.ProtonPlus) for managing Proton versions
+- [AdwSteamGtk](https://flathub.org/apps/io.github.Foldex.AdwSteamGtk) for Steam GTK theming
+- [GPU Screen Recorder](https://flathub.org/apps/com.dec05eba.gpu_screen_recorder) (Shadowplay like app)
 
 🛠️ **System Tools & Utilities**
-- Extension Manager
-- Blanket
-- Fragments
-- HandBrake
-- Camera Controls
-- BoxBuddy
-- Oh-My-Zsh
+- [Extension Manager](https://flathub.org/apps/com.mattjakeman.ExtensionManager)
+- [Blanket](https://flathub.org/apps/com.rafaelmardojai.Blanket)
+- [Fragments](https://flathub.org/apps/de.haeckerfelix.Fragments)
+- [HandBrake](https://flathub.org/apps/fr.handbrake.ghb)
+- [Camera Controls](https://flathub.org/apps/hu.irl.cameractrls)
+- [BoxBuddy](https://flathub.org/apps/io.github.dvlv.boxbuddyrs)
+- [Resources](https://flathub.org/apps/net.nokyan.Resources)
+- [Pods](https://flathub.org/apps/com.github.marhkb.Pods)
+- [Refine](https://flathub.org/apps/page.tesk.Refine)
+- GPU drivers (NVIDIA or Intel/AMD depending on variant)
 
 🎨 **Visual & Desktop Experience**
-- Bibata cursor themes
-- WhiteSur Icons
+- [Bibata cursor themes](https://github.com/ful1e5/Bibata_Cursor)
+- [WhiteSur Icons](https://github.com/vinceliuice/WhiteSur-icon-theme)
 - GNOME extensions:
-  - Night Theme Switcher
-  - Blur my Shell
-  - AppIndicator support
-  - Alphabetical App Grid
-  - Desktop Icons NG (DING)
-  - Hot Edge
-  - Tiling Shell
-  - Gnome 4x UI Improvements
-  - Just Perfection
+  - [Night Theme Switcher](https://extensions.gnome.org/extension/2236/night-theme-switcher/)
+  - [Blur my Shell](https://extensions.gnome.org/extension/3193/blur-my-shell/)
+  - [AppIndicator and KStatusNotifierItem Support](https://extensions.gnome.org/extension/615/appindicator-support/)
+  - [Alphabetical App Grid](https://extensions.gnome.org/extension/4269/alphabetical-app-grid/)
+  - [Desktop Icons NG (DING)](https://extensions.gnome.org/extension/2087/desktop-icons-ng-ding/)
+  - [Hot Edge](https://extensions.gnome.org/extension/4222/hot-edge/)
+  - [Tiling Shell](https://extensions.gnome.org/extension/7065/tiling-shell/)
+  - [Gnome 4x UI Improvements](https://extensions.gnome.org/extension/4158/gnome-40-ui-improvements/)
+  - [Just Perfection](https://extensions.gnome.org/extension/3843/just-perfection/)
 
 ## Installation
 
